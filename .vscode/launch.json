@@ -1,0 +1,52 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "SnakeAndLadderGame",
+      "request": "launch",
+      "mainClass": "SnakeAndLadderGame",
+      "projectName": "IEA - Copy_59a85224"
+    },
+    {
+      "type": "java",
+      "name": "SnakeAndLadder",
+      "request": "launch",
+      "mainClass": "SnakeAndLadder",
+      "projectName": "IEA - Copy_59a85224"
+    },
+    {
+      "type": "java",
+      "name": "Snake",
+      "request": "launch",
+      "mainClass": "Snake",
+      "projectName": "IEA - Copy_59a85224"
+    },
+    {
+      "type": "java",
+      "name": "SnakeAndLaddersGame",
+      "request": "launch",
+      "mainClass": "SnakeAndLaddersGame",
+      "projectName": "IEA - Copy_59a85224"
+    },
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": false,
+      "externalConsole": true,
+      "cwd": ".",
+      "program": "build/Debug/outDebug",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    }
+  ]
+}
