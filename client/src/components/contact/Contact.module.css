@@ -17,6 +17,34 @@
     margin-bottom: 20px;
 }
 
+.intro_header {
+    margin-top: 1.5%;
+    height: 620px;
+    opacity: 1;
+    color: #fff;
+    background-color: #f4f4f4;
+    background-image: url("../../assets/negotiating-business-image-businesswomen-handshake-happy-with-work-business-woman-she-is-enjoying-with-her-workmate-handshake-gesturing-people-connection-deal-concept-vintage-effect-style-pictures.jpg");
+    background-position: 0 0;
+    background-size: cover;
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+    display: flex;
+}
+
+.intro_header.cc_subpage {
+    height: 480px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url("../../assets/negotiating-business-image-businesswomen-handshake-happy-with-work-business-woman-she-is-enjoying-with-her-workmate-handshake-gesturing-people-connection-deal-concept-vintage-effect-style-pictures.jpg");
+    background-size: cover;
+}
+.intro_content {
+    width: 70%;
+    max-width: 1140px;
+    text-align: center;
+}
 .intro_text {
     width: 80%;
     margin: 0 auto 50px; /* Combine margins */
@@ -30,6 +58,17 @@
     margin: 10px 0; /* Combine margin properties */
 }
 
+.section {
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+}
 .contact_us_form {
     width: 95vw;
     max-width: 1140px;
@@ -79,8 +118,8 @@
     text-align: center;
 }
 
-input, 
-textarea, 
+input,
+textarea,
 select {
     background-color: transparent;
     border-radius: 5px;
@@ -89,6 +128,7 @@ select {
     font-size: 16px;
     margin-bottom: 20px; /* Space between input fields */
 }
+
 .input {
     color: #6800a8;
     border: 1px solid #b853f8;
@@ -96,7 +136,16 @@ select {
 
 .input_sun {
     color: #c8b9ff;
+    background-color: black;
     border: 1px solid #c8b9ff;
+}
+.select {
+    color: #6800a8;
+    border: 1px solid #b853f8;
+}
+.select_sun {
+    background-color: black;
+    color: #c8b9ff;
 }
 
 input[type="text"],
@@ -126,7 +175,11 @@ input[type="file"] {
 
 .file {
     border: none;
+}
 
+.file_sun {
+    border: none;
+    color: #c8b9ff;
 }
 
 .mail {
@@ -144,3 +197,40 @@ input[type="file"] {
     cursor: pointer;
 }
 
+
+@media screen and (max-width: 991px) {
+    .intro_header {
+        max-height: 390px;
+    }
+
+    .heading_jumbo {
+        font-size: 54px;
+    }   
+}
+
+@media screen and (max-width: 768px) {
+    .section {
+        margin: 15px;
+    }
+    .project_info {
+        padding: 50px;
+    }
+    .heading_jumbo {
+        font-size: 45px;
+    }
+    .heading_jumbo_small {
+        font-size: 38px;
+    }
+}
+@media screen and (max-width: 479px) {
+    .section {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    .project_info {
+        padding: 0px;
+    }
+    .heading_jumbo_small {
+        font-size: 34px;
+    }
+}

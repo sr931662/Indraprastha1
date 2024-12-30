@@ -109,8 +109,10 @@ h1 {
 }
 
 .pagination button.activePage {
-    background-color: #007bff;
+    background-color: #9883e5;
     color: #fff;
+    border: none;
+    border-radius: 10px;
 }
 .w_layout_grid {
     grid-row-gap: 16px;
@@ -127,6 +129,7 @@ h1 {
     max-height: 500px;
     border-radius: 10px;
 }
+
 .card_isSun {
     background-color: #555;
     padding: 15px;
@@ -142,6 +145,7 @@ h1 {
 .image {
     width: 100%;
 }
+
 .project_details_grid {
     grid-column-gap: 80px;
     grid-row-gap: 30px;

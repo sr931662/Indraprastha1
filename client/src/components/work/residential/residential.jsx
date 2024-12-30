@@ -2,26 +2,20 @@ import React, { useState } from 'react'
 import styles from './residential.module.css'
 import { getImageUrl } from '../../../utils'
 
-const ITEMS_PER_PAGE = 6;
+const ITEMS_PER_PAGE = 10;
 
 const Residential = ({ isSun, toggleTheme }) => {
     const [currentPage, setCurrentPage] = useState(1);
 
     const residentialProjects = [
-            // ... your project data here
-            { id:'id_01', name: 'Project 1', image: 'resid.jpg', owner: 'Mr. Saurabh', location: 'Barabanki', duration: '1 year' },
-            { id:'id_02', name: 'Project 2', image: 'pic3.jpg', owner: 'Mr. Saurabh', location: 'Barabanki', duration: '1 year' },
-            { id:'id_03', name: 'Project 3', image: 'resid.jpg', owner: 'Mr. Saurabh', location: 'Barabanki', duration: '1 year' },
-            { id:'id_04', name: 'Project 4', image: 'pic3.jpg', owner: 'Mr. Saurabh', location: 'Barabanki', duration: '1 year' },
-            { id:'id_05', name: 'Project 5', image: 'resid.jpg', owner: 'Mr. Saurabh', location: 'Barabanki', duration: '1 year' },
-            { id:'id_06', name: 'Project 6', image: 'pic3.jpg', owner: 'Mr. Saurabh', location: 'Barabanki', duration: '1 year' },
-            { id:'id_07', name: 'Project 7', image: 'resid.jpg', owner: 'Mr. Saurabh', location: 'Barabanki', duration: '1 year' },
-            { id:'id_08', name: 'Project 8', image: 'pic3.jpg', owner: 'Mr. Saurabh', location: 'Barabanki', duration: '1 year' },
-            { id:'id_09', name: 'Project 9', image: 'resid.jpg', owner: 'Mr. Saurabh', location: 'Barabanki', duration: '1 year' },
-            { id:'id_10', name: 'Project 10', image: 'pic3.jpg', owner: 'Mr. Saurabh', location: 'Barabanki', duration: '1 year' },
-            { id:'id_11', name: 'Project 11', image: 'resid.jpg', owner: 'Mr. Saurabh', location: 'Barabanki', duration: '1 year' },
-            { id:'id_12', name: 'Project 12', image: 'pic3.jpg', owner: 'Mr. Saurabh', location: 'Barabanki', duration: '1 year' },
-            ];
+        // ... your project data here
+        { id:'id_01', name: 'Project 1', image: 'resid.jpg', owner: 'Mr. Indrapal Singh', location: 'Barabanki', duration: '1 year' },
+        { id:'id_01', name: 'Project 1', image: 'resid.jpg', owner: 'Mr. Indrapal Singh', location: 'Barabanki', duration: '1 year' },
+        { id:'id_01', name: 'Project 1', image: 'resid.jpg', owner: 'Mr. Indrapal Singh', location: 'Barabanki', duration: '1 year' },
+        { id:'id_01', name: 'Project 1', image: 'resid.jpg', owner: 'Mr. Indrapal Singh', location: 'Barabanki', duration: '1 year' },
+        { id:'id_01', name: 'Project 1', image: 'resid.jpg', owner: 'Mr. Indrapal Singh', location: 'Barabanki', duration: '1 year' },
+        { id:'id_01', name: 'Project 1', image: 'resid.jpg', owner: 'Mr. Indrapal Singh', location: 'Barabanki', duration: '1 year' },
+    ];
 
     const indexOfLastItem = currentPage * ITEMS_PER_PAGE;
     const indexOfFirstItem = indexOfLastItem - ITEMS_PER_PAGE;
@@ -99,81 +93,44 @@ const Residential = ({ isSun, toggleTheme }) => {
             <div className={styles.section}>
                 <div className={styles.container}>
                     <h1>Gallery</h1>
+{/*                      */}{/* Display current items */}
+{/*                     <div className={`${styles.w_layout_grid} ${styles.project_gallery_grid}`}> */}
+{/*                         {currentItems.map((project, index) => ( */}
+{/*                             <div key={index} className={styles.projectItem}> */}
+{/*                                 <img src={getImageUrl(project.image)} alt={project.name} className={styles.projectImage} /> */}
+{/*                                 <h2 className={isSun ? styles.projectName_isSun : styles.projectName}>{project.name}</h2> */}
+{/*                                 <p className={isSun ? styles.projectDescription_isSun : styles.projectDescription}>{project.description}</p> */}
+{/*                             </div> */}
+{/*                         ))} */}
+{/*                     </div> */}
                     {/* Display current items */}
                     <div className={`${styles.w_layout_grid} ${styles.project_gallery_grid}`}>
                         {currentItems.map((project, index) => (
-                            <div key={index} className={styles.projectItem}>
-                                <img src={getImageUrl(project.image)} alt={project.name} className={styles.projectImage} />
-                                <h2 className={isSun ? styles.projectName_isSun : styles.projectName}>{project.name}</h2>
-                                <p className={isSun ? styles.projectDescription_isSun : styles.projectDescription}>{project.description}</p>
+                            <div key={index} className={isSun ? styles.card_isSun : styles.card}>
+                                <div className={styles.cont}><img src={getImageUrl(project.image)} alt={project.name} className={styles.image} /></div>
+                                <div className={styles.paragraph_light}>
+                                     <ul>
+                                        <li><strong>Owner : </strong><p>{project.owner}</p></li>
+                                        <li><strong>Location : </strong><p>{project.location}</p></li>
+                                        <li><strong>Duration : </strong><p>{project.duration}</p></li>
+                                    </ul>
+                                </div>
                             </div>
                         ))}
                     </div>
-{/*                     <div className={`${styles.w_layout_grid} ${styles.project_gallery_grid}`}> */}
-{/*                         <div id={styles.id_01}> */}
-{/*                             <div className={isSun ? styles.card_isSun : styles.card}> */}
-{/*                                 <div className={styles.cont}><img src={getImageUrl('resid.jpg')} alt="" className={styles.image} /></div> */}
-{/*                                 <div className={styles.paragraph_light}> */}
-{/*                                     <ul> */}
-{/*                                         <li><strong>Owner : </strong><p>Mr. Saurabh</p></li> */}
-{/*                                         <li><strong>Location : </strong><p>Barabanki</p></li> */}
-{/*                                         <li><strong>Duration : </strong><p>1 year</p></li> */}
-{/*                                     </ul> */}
-{/*                                 </div> */}
-{/*                             </div> */}
-{/*                         </div> */}
-
-{/*                         <div id={styles.id_02}> */}
-{/*                             <div className={isSun ? styles.card_isSun : styles.card}> */}
-{/*                                 <div className={styles.cont}><img src={getImageUrl('pic3.jpg')} alt="" className={styles.image} /></div> */}
-{/*                                 <div className={styles.paragraph_light}> */}
-{/*                                     <ul> */}
-{/*                                         <li><strong>Owner : </strong><p>Mr. Saurabh</p></li> */}
-{/*                                         <li><strong>Location : </strong><p>Barabanki</p></li> */}
-{/*                                         <li><strong>Duration : </strong><p>1 year</p></li> */}
-{/*                                     </ul> */}
-{/*                                 </div> */}
-{/*                             </div> */}
-{/*                         </div> */}
-{/*                         <div id={styles.id_03}> */}
-{/*                             <div className={isSun ? styles.card_isSun : styles.card}> */}
-{/*                                 <div className={styles.cont}><img src={getImageUrl('resid.jpg')} alt="" className={styles.image} /></div> */}
-{/*                                 <div className={styles.paragraph_light}> */}
-{/*                                     <ul> */}
-{/*                                         <li><strong>Owner : </strong><p>Mr. Saurabh</p></li> */}
-{/*                                         <li><strong>Location : </strong><p>Barabanki</p></li> */}
-{/*                                         <li><strong>Duration : </strong><p>1 year</p></li> */}
-{/*                                     </ul> */}
-{/*                                 </div> */}
-{/*                             </div> */}
-{/*                         </div> */}
-{/*                         <div id={styles.id_04}> */}
-{/*                             <div className={isSun ? styles.card_isSun : styles.card}> */}
-{/*                                 <div className={styles.cont}><img src={getImageUrl('pic3.jpg')} alt="" className={styles.image} /></div> */}
-{/*                                 <div className={styles.paragraph_light}> */}
-{/*                                     <ul> */}
-{/*                                         <li><strong>Owner : </strong><p>Mr. Saurabh</p></li> */}
-{/*                                         <li><strong>Location : </strong><p>Barabanki</p></li> */}
-{/*                                         <li><strong>Duration : </strong><p>1 year</p></li> */}
-{/*                                     </ul> */}
-{/*                                 </div> */}
-{/*                             </div> */}
-{/*                         </div> */}
-{/*                     </div> */}
+                    {/* Pagination */}
+                    <div className={styles.pagination}>
+                        {Array.from({ length: totalPages }, (_, i) => (
+                            <button
+                                key={i}
+                                onClick={() => paginate(i + 1)}
+                                className={currentPage === i + 1 ? styles.activePage : ''}>
+                                {i + 1}
+                            </button>
+                        ))}
+                    </div>
                     <div className={div_color}></div>
                 </div>
-            </div>
-            {/* Pagination */}
-            <div className={styles.pagination}>
-                {Array.from({ length: totalPages }, (_, i) => (
-                    <button
-                        key={i}
-                        onClick={() => paginate(i + 1)}
-                        className={currentPage === i + 1 ? styles.activePage : ''}
-                    >
-                        {i + 1}
-                    </button>
-                ))}
             </div>
         </div>
     )
