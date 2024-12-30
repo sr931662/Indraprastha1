@@ -10,7 +10,7 @@ const errorMiddleware = require('./middleware/error-middleware')
 connectDB()
 
 const corsOptions = {
-    origin: "http://localhost:5173",
+    origin: "https://indraprastha1.vercel.app",
     methods: "GET, POST, PUT, DELETE, PATCH, HEAD",
     credentials: true,
 };
