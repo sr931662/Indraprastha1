@@ -49,23 +49,31 @@
 }
 
 @media screen and (max-width: 991px) {
+    .intro_header {
+        max-height: 390px;
+    }
     .heading_jumbo {
-        font-size: 56px;
-        line-height: 70px;
+        font-size: 54px;
     }
 }
 
 @media screen and (max-width: 767px) {
     .intro_content {
-        width: 80%;
+        margin: 15px;
     }
     .heading_jumbo {
-        font-size: 50px;
-        line-height: 64px;
+        font-size: 45px;
+    }
+    .heading_jumbo_small {
+        font-size: 38px;
     }
 }
 
 @media screen and (max-width: 479px) {
+    .section {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
     .heading_jumbo {
         font-size: 36px;
         line-height: 48px;
