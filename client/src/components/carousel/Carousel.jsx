@@ -28,7 +28,7 @@ const Carousel = ({ isSun }) => {
                 INDRAPRASTHA <br/>ENGINEERS & ARCHITECT
               </div>
               <div className={`${styles.paragraph_bigger} ${styles.cc_bigger_white_light}`}>
-                We bring your dreams into reality.
+                We build your dreams into reality.
               </div>
             </div>
             <Link to="/about-us" className={`${styles.button} ${styles.cc_jumbo_button} ${styles.cc_jumbo_white} ${styles.w_inline_block}`}>
@@ -65,8 +65,8 @@ const Carousel = ({ isSun }) => {
               <div id={styles.w_node__86e64837_0616_515b_4568_76c147234d41_805e9b5d}>
                 <div className={styles.home_section_wrap}>
                   <div className={`${label_color} ${styles.cc_light}`}>Creativity</div>
-                  <h2 className={section_heading_color}>Innovative Designs</h2>
-                  <p className={para_color}>We understand that every project is unique. Our creative minds thrive on challenges, consistently pushing boundaries to devise custom-tailored solutions that blend functionality, aesthetics, and sustainability.</p>
+                  <h2 className={section_heading_color}>Innovative Design, Tailored Solutions</h2>
+                  <p className={para_color}>We believe every project tells its own story. Our team thrives on originality, embracing challenges to craft bespoke designs that seamlessly merge functionality, aesthetics, and sustainability. By pushing creative boundaries, we deliver solutions that are as unique as they are impactful.</p>
                 </div>
                 <Link to="/work" className={`${styles.button} ${styles.w_inline_block}`}>
                   <div>Learn More</div>
@@ -79,8 +79,8 @@ const Carousel = ({ isSun }) => {
               <div id={styles.w_node__a1fb662b_98e3_9679_28c8_924b14c33495_805e9b5d}>
                 <div className={styles.home_section_wrap}>
                   <div className={`${label_color} ${styles.cc_light}`}>Services</div>
-                  <h2 className={section_heading_color}>Comprehensive Services</h2>
-                  <p className={para_color}>Whether you're envisioning a residential masterpiece, commercial complex, or infrastructure development, we offer a comprehensive suite of architectural and civil engineering services. From initial design sketches to construction management, we've got you covered.</p>
+                  <h2 className={section_heading_color}>Comprehensive Architectural & Engineering Excellence</h2>
+                  <p className={para_color}>Whether you’re envisioning a stunning residential design, a cutting-edge commercial complex, or a transformative infrastructure project, we offer a full spectrum of architectural and civil engineering services. From conceptual designs to seamless construction management, we deliver tailored solutions that bring your vision to life with precision and expertise.</p>
                 </div>
                 <Link to="/about-us" className={`${styles.button} ${styles.w_inline_block}`}>
                   <div>Learn More</div>
@@ -93,8 +93,8 @@ const Carousel = ({ isSun }) => {
               <div id={styles.w_node__b9ca975a_930b_7000_be6a_90f18993e0e8_805e9b5d}>
                 <div className={styles.home_section_wrap}>
                   <div className={`${label_color} ${styles.cc_light}`}>Commitment</div>
-                  <h2 className={section_heading_color}>Commitment to excellence</h2>
-                  <p className={para_color}>At IEA, excellence is not a goal; it's our standard. We adhere to the highest industry standards, integrating the latest technologies and sustainable practices into our projects. Your vision is our blueprint, and our commitment to quality ensures that each project stands as a testament to precision and durability.</p>
+                  <h2 className={section_heading_color}>Unwavering Commitment to Excellence</h2>
+                  <p className={para_color}>At IEA, excellence is our foundation. We uphold the highest industry standards, integrating state-of-the-art technologies and sustainable practices into every project. Guided by your vision, our unwavering commitment to quality ensures that every creation embodies precision, durability, and innovation, standing as a lasting testament to our dedication.</p>
                 </div>
                 <Link to="/work" className={`${styles.button} ${styles.w_inline_block}`}>
                   <div>Learn More</div>
@@ -106,8 +106,8 @@ const Carousel = ({ isSun }) => {
         <div className={div_color}></div>
 
             <div className={styles.skills_container}>
-              <h1 className={heading_color}>Discover the rich palette of construction materials</h1>
-              <p className={`${para_color} ${styles.para_mat}`}>We delve into the vibrant tapestry of materials that form the backbone of Indian residential houses and infrastructures. With a heritage spanning millennia, Indian architecture seamlessly blends tradition with innovation, creating structures that stand as testaments to craftsmanship, sustainability, and cultural diversity.</p>
+              <h1 className={heading_color}>Explore the Essence of Construction Materials</h1>
+              <p className={`${para_color} ${styles.para_mat}`}>We delve into the rich array of materials shaping Indian residential and infrastructure design. With a legacy stretching back millennia, Indian architecture masterfully harmonizes tradition and innovation. Each structure reflects unparalleled craftsmanship, sustainability, and cultural diversity, creating enduring masterpieces that stand as symbols of progress and heritage.</p>
               <div className={`${styles.w_layout_grid} ${mat_sec_color}`}>
                 <div id={styles.id_01}>
                   <img src={getImageUrl("concrete-mixer.gif")} alt="" width="50" className={styles.mat_icon} />
