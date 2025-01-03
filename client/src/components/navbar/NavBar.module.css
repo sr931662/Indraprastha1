@@ -1,9 +1,12 @@
 @import "../../vars.css";
 
+
+
 .box {
     width: 100vw;
     margin-top: 10px;
 }
+
 .navigation {
     background-color: rgba(0, 0, 0, 0);
     align-items: center;
