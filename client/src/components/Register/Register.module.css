@@ -117,7 +117,7 @@ form {
     padding: 20px;
     background-color: transparent;
     border-width: 1px;  
-    margin-top: 5%; 
+    margin-top: 2%;
 }
 
 .input_isSun {
@@ -129,7 +129,7 @@ form {
     padding: 20px;
     background-color: transparent;
     border-width: 1px;   
-    margin-top: 5%;
+    margin-top: 2%;
 }
 
 .name_section {
@@ -185,6 +185,7 @@ form {
     display: flex;
     flex-direction: row;
     color: #1c1e40;
+    width: 80%;
 }
 
 .p_isSun {
