@@ -14,7 +14,7 @@ const Work_content = ({ isSun, toggleTheme }) => {
                     <div className={`${styles.w_layout_grid} ${styles.project_details_grid}`}>
                         <div className={styles.details_wrap}>
                             <div className={isSun ? styles.label_isSun : styles.label}>DESCRIPTION</div>
-                            <div className={isSun ? styles.header_paragraph_light_isSun : styles.header_paragraph_light}>Welcome to our portfolio, where we showcase the diverse range of projects we've brought to life. With over two decades of experience, we pride ourselves on delivering excellence across various civil engineering and architectural domains. Each project tells a story of our dedication to quality, innovation, and client satisfaction.</div>
+                            <div className={isSun ? styles.header_paragraph_light_isSun : styles.header_paragraph_light}>Explore our portfolio, showcasing a wide array of projects that reflect over two decades of expertise in civil engineering and architecture. Each project highlights our commitment to quality, innovation, and client satisfaction, demonstrating our ability to bring visionary concepts to life across diverse domains.</div>
                         </div>
                     </div>
                     <div className={div_color}></div>
@@ -35,7 +35,7 @@ const Work_content = ({ isSun, toggleTheme }) => {
                             </Link>
                             <div className={styles.project_name_wrap}>
                                 <Link to="/work/residential-houses" className={isSun ? styles.project_name_link_isSun : styles.project_name_link}>Residential House Projects</Link>
-                                <div className={isSun ? styles.paragraph_light_isSun : styles.paragraph_light}>Creating homes that merge aesthetics, functionality, and durability, our residential projects are designed to be lived in and loved. From modern villas to compact urban homes, we bring your vision to life with meticulous planning and attention to detail.</div>
+                                <div className={isSun ? styles.paragraph_light_isSun : styles.paragraph_light}>Each residential project is a unique journey where your vision meets our expertise. With over 20 years of experience, we craft homes that go beyond aesthetics, creating sanctuaries that reflect your lifestyle and memories. Our approach is centered on collaboration, innovative design, sustainability, and delivering on time. From initial consultation to personalized interiors, we ensure every detail aligns with your vision, creating a home built with precision, quality, and care.</div>
                             </div>
                         </div>
                     </div>
