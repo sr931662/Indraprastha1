@@ -5,7 +5,7 @@ import styles from "./NavBar.module.css";
 import { getImageUrl } from '../../utils';
 import { useAuth } from '../../store/auth';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSun, faMoon, faHome, faBriefcase, faAddressCard, faUser, faToggleOn, faToggleOff, faArrowRight, faContactBook } from '@fortawesome/free-solid-svg-icons'
+import { faSun, faMoon, faHome, faPowerOff, faBriefcase, faAddressCard, faUser, faToggleOn, faToggleOff, faArrowRight, faContactBook } from '@fortawesome/free-solid-svg-icons'
 
 
 const NavBar = ({ isSun, toggleTheme }) => {
@@ -75,10 +75,6 @@ const NavBar = ({ isSun, toggleTheme }) => {
                                     <span>Work</span>
                                 </Link>
 
-                                {/* <Link to="/projects" className={`mx-3 ${styles.navigation_item} ${w_nav_link_color}`} >
-                                   d <i></i><i></i>
-                                    <span>Projects</span>
-                                </Link> */}
 
                                 <Link to="/about-us" className={`mx-3 ${styles.navigation_item} ${w_nav_link_color}`} >
                                     <i></i><i></i>
@@ -86,10 +82,14 @@ const NavBar = ({ isSun, toggleTheme }) => {
                                 </Link>
                                 <p className={`mx-3 ${styles.navigation_item} ${w_nav_link_color} ${styles.barrier}`}>|</p>
                                 {isLoggedIn ? 
-                                    (<Link to="/logout" className={`mx-3 ${styles.navigation_item} ${w_nav_link_color} `} >
+                                    (<>
+                                        <Link to="/logout" className={`mx-3 ${styles.navigation_item} ${w_nav_link_color} `} >
                                         <i></i><i></i>
                                         <span>Log out</span>
-                                    </Link>)
+                                    </Link>
+                                    <p className={`mx-3 ${styles.navigation_item} ${w_nav_link_color} ${styles.barrier}`}>|</p>
+                                    <span className={`mx-3 ${styles.navigation_item} ${w_nav_link_color} ${styles.user_name}`}>Hi, {user.fname}</span>
+                                    </>)
                                     :
                                     (<>
                                     <Link to="/login" className={`mx-3 ${styles.navigation_item} ${w_nav_link_color}`} >
@@ -97,8 +97,8 @@ const NavBar = ({ isSun, toggleTheme }) => {
                                         <span>Log in</span>
                                     </Link>
                                     <Link to="/sign-up" className={`mx-3 ${styles.navigation_item} ${w_nav_link_color}`} >
-                                    <i></i><i></i>
-                                    <span>Register</span>
+                                        <i></i><i></i>
+                                        <span>Register</span>
                                     </Link>
                                     </>)
                                 }
@@ -117,75 +117,85 @@ const NavBar = ({ isSun, toggleTheme }) => {
                             
                     </Navbar.Toggle>
                     <div className={`${styles.sub_menu_wrap} ${isOpen ? styles.open_menu : ''}`} id={styles.subMenu}>
-                                <div className={sub_menu_color}>
-                                    <div className={styles.user_info}>
-                                        {
-                                            isLoggedIn ? 
-                                            (<p className={isSun ? styles.user_isSun : styles.user}>Hi, {user.fname}</p>) : 
-                                            (<p className={styles.user}>Guest Mode</p>)
-                                        }
-                                    </div>
-                                    <hr />
-                                    <Link to="/" className={sub_menu_link_color}>
-                                        <FontAwesomeIcon icon={faHome} />
-                                        <p className={styles.list}>Home</p>
-                                        <FontAwesomeIcon icon={faArrowRight} />
-                                    </Link>
-                                    <Link to="/work" className={sub_menu_link_color}>
-                                        <FontAwesomeIcon icon={faBriefcase} />
-                                        <p className={styles.list}>Work</p>
-                                        <FontAwesomeIcon icon={faArrowRight} />
-                                    </Link>
-                                    {/* <Link to="/projects" className={sub_menu_link_color}>
-                                        <FontAwesomeIcon icon={faBuilding} />
-                                        <p className={styles.list}>Projects</p>
-                                        <FontAwesomeIcon icon={faArrowRight} />
-                                    </Link> */}
-                                    <Link to="/about-us" className={sub_menu_link_color}>
-                                        <FontAwesomeIcon icon={faAddressCard} />
-                                        <p className={styles.list}>About Us</p>
-                                        <FontAwesomeIcon icon={faArrowRight} />
-                                    </Link>
-                                    <Link to="/contact-us" className={sub_menu_link_color}>
-                                        <FontAwesomeIcon icon={faContactBook} />
-                                        <p className={styles.list}>Contact us</p>
-                                        <FontAwesomeIcon icon={faArrowRight} />
-                                    </Link>
-                                    <hr />
-                                    <div className={sub_menu_link_color}>
-                                        {/* <FontAwesomeIcon icon={faMoon} /> */}
-                                        {isSun ? (<FontAwesomeIcon icon={faSun} onClick={toggleTheme} />)
-                                        :
-                                        (<FontAwesomeIcon icon={faMoon} onClick={toggleTheme}/>)
-                                        }
-                                        {/* <div>{isSun ? <FontAwesomeIcon icon={faSun} onClick={toggleTheme}/> : <FontAwesomeIcon icon={faMoon} onClick={toggleTheme}/>}</div> */}
-                                        <p className={styles.list} id={styles.theme} onClick={toggleTheme}>Theme</p>
-                                        {isSun ? (<FontAwesomeIcon icon={faToggleOn} onClick={toggleTheme} />)
-                                        :
-                                        (<FontAwesomeIcon icon={faToggleOff} onClick={toggleTheme}/>)
-                                        }
-                                    </div>
-                                    <hr />
-
-                                    
-                                    {isLoggedIn ? 
-                                    (<Link to="/logout" className={sub_menu_link_color}>
-                                    <FontAwesomeIcon icon={faUser} />
-                                    <p className={styles.list}>Log out</p>
-                                    <FontAwesomeIcon icon={faArrowRight} />
-                                    </Link>)
-                                    :
-                                    (<Link to="/login" className={sub_menu_link_color}>
-                                        <FontAwesomeIcon icon={faUser} />
-                                        <p className={styles.list}>Log in</p>
-                                        <FontAwesomeIcon icon={faArrowRight} />
-                                    </Link>)
-                                    }
-                                    
-                                    
-                                </div>
-
+                        <div className={sub_menu_color}>
+                            <div className={styles.user_info}>
+                                {
+                                    isLoggedIn ?
+                                    (<p className={isSun ? styles.user_isSun : styles.user}>Hi, {user.fname}</p>) :
+                                    (<p className={isSun ? styles.user_isSun : styles.user}>Guest Mode</p>)
+                                }
                             </div>
+                            <hr />
+                            <Link to="/" className={sub_menu_link_color}>
+                                <FontAwesomeIcon icon={faHome} />
+                                <p className={styles.list}>Home</p>
+                                <FontAwesomeIcon icon={faArrowRight} />
+                            </Link>
+                            <Link to="/work" className={sub_menu_link_color}>
+                                <FontAwesomeIcon icon={faBriefcase} />
+                                <p className={styles.list}>Work</p>
+                                <FontAwesomeIcon icon={faArrowRight} />
+                            </Link>
+                            {/* <Link to="/projects" className={sub_menu_link_color}>
+                                <FontAwesomeIcon icon={faBuilding} />
+                                <p className={styles.list}>Projects</p>
+                                <FontAwesomeIcon icon={faArrowRight} />
+                            </Link> */}
+                            <Link to="/about-us" className={sub_menu_link_color}>
+                                <FontAwesomeIcon icon={faAddressCard} />
+                                <p className={styles.list}>About Us</p>
+                                <FontAwesomeIcon icon={faArrowRight} />
+                            </Link>
+                            <Link to="/contact-us" className={sub_menu_link_color}>
+                                <FontAwesomeIcon icon={faContactBook} />
+                                <p className={styles.list}>Contact us</p>
+                                <FontAwesomeIcon icon={faArrowRight} />
+                            </Link>
+                            <hr />
+                            <div className={sub_menu_link_color}>
+                                {/* <FontAwesomeIcon icon={faMoon} /> */}
+                                {isSun ? (<FontAwesomeIcon icon={faSun} onClick={toggleTheme} />)
+                                :
+                                (<FontAwesomeIcon icon={faMoon} onClick={toggleTheme}/>)
+                                }
+                                {/* <div>{isSun ? <FontAwesomeIcon icon={faSun} onClick={toggleTheme}/> : <FontAwesomeIcon icon={faMoon} onClick={toggleTheme}/>}</div> */}
+                                <p className={styles.list} id={styles.theme} onClick={toggleTheme}>Theme</p>
+                                {isSun ? (<FontAwesomeIcon icon={faToggleOn} onClick={toggleTheme} />)
+                                :
+                                (<FontAwesomeIcon icon={faToggleOff} onClick={toggleTheme}/>)
+                                }
+                            </div>
+                            <hr />
+
+                            <Link to="/profile" className={sub_menu_link_color}>
+                            <FontAwesomeIcon icon={faAddressCard} />
+                                <p className={styles.list}>Profile</p>
+                            <FontAwesomeIcon icon={faArrowRight} />
+                            </Link>
+                            {isLoggedIn ?
+                            (<Link to="/logout" className={sub_menu_link_color}>
+                            <FontAwesomeIcon icon={faUser} />
+                            <p className={styles.list}>Log out</p>
+                            <FontAwesomeIcon icon={faArrowRight} />
+                            </Link>)
+                            :
+                            (<>
+                            <Link to="/login" className={sub_menu_link_color}>
+                                <FontAwesomeIcon icon={faUser} />
+                                <p className={styles.list}>Log in</p>
+                                <FontAwesomeIcon icon={faArrowRight} />
+                            </Link>
+                            <Link to="/sign-up" className={sub_menu_link_color}>
+                                <FontAwesomeIcon icon={faUser} />
+                                <p className={styles.list}>Register</p>
+                                <FontAwesomeIcon icon={faArrowRight} />
+                            </Link>
+                            </>)
+                            }
+
+                        </div>
+
+                    </div>
                     
                     <Link to="/contact-us" className={`${styles.button} ${styles.cc_contact_us} ${styles.w_inline_block}`} onClick={() => onUpdateActiveLink('about')}>
                             <i></i><i></i>
