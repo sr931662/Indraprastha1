@@ -22,6 +22,7 @@ import FlyInfra from "./components/work/Flyovers/Flyovers";
 
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import Profile from "./components/Profile/Profile";
 
 const useScrollToTop = () => {
   const { pathname } = useLocation();
@@ -63,7 +64,8 @@ const App = () => {
           <Route exact path="/work/land-development" element={<LandDev_Page isSun={isSun} />} />
           <Route exact path="/work/flyover-infrastructure" element={<FlyInfra_Page isSun={isSun} />} />
           <Route exact path="/work/educational-institutes" element={<Education_Page isSun={isSun} />} />
-          {/* Login and Signup pages */}
+          {/* Profile, Login and Signup pages */}
+          <Route exact path="/profile" element={<Profile_page isSun={isSun}/>} />
           <Route exact path="/login" element={<Login_page isSun={isSun} />} />
           <Route exact path="/logout" element={<Logout />} />
           <Route exact path="/sign-up" element={<Register_page isSun={isSun} />} />
@@ -107,7 +109,6 @@ const Works = ({ isSun }) => {
     </div>
   )
 }
-
 
 const Resid = ({ isSun }) => {
     useScrollToTop();
@@ -164,7 +165,6 @@ const FlyInfra_Page = ({ isSun }) => {
   )
 }
 
-
 const CHouse_Page = ({ isSun }) => {
     useScrollToTop();
   return (
@@ -194,6 +194,16 @@ const Login_page = ({ isSun }) => {
     </div>
   )
 }
+
+const Profile_page = ({ isSun }) => {
+  return (
+    <div>
+      <Profile isSun={isSun} />
+      <Footer />
+    </div>
+  )
+}
+
 const Register_page = ({ isSun }) => {
   return (
     <div>
@@ -209,6 +219,5 @@ const Contact_us = ({ isSun }) => {
       <Footer />
     </div>
   )
-
 }
 export default App
