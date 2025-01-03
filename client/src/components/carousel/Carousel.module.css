@@ -5,7 +5,7 @@
     color: #fff;
     background-color: #f4f4f4;
     background-image: url("../../assets/dream city.jpg");
-    background-position: 0 0;
+    background-position: center;
     background-size: cover;
     border-radius: 15px;
     justify-content: center;
@@ -409,8 +409,52 @@ img {
         grid-template-areas: "."
                              ".";
     }
+
     .intro_text {
         width: auto;
+    }
+
+    .comp {
+        margin: 0 auto;
+        align-content: center;
+        padding: 5px;
+        justify-content: center;
+    }
+    
+    .comp_isSun {
+        width: 75px;
+        border-radius: 5px;
+        margin: 0 auto;
+        align-content: center;
+        padding: 5px;
+        justify-content: center;
+    }
+
+    .mat_sec {
+        grid-column-gap: 50px;
+        grid-row-gap: 60px;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "."
+            ".";
+        margin-bottom: 120px;
+        display: grid;
+        text-align: center;
+        margin: 0 auto;
+    }
+    
+    .mat_sec_isSun {
+        color: #d1d1d1;
+        grid-column-gap: 50px;
+        grid-row-gap: 60px;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "."
+            ".";
+        margin-bottom: 120px;
+        display: grid;
+        text-align: center;
+        margin: 0 auto;
     }
 
     #w_node__86e64837_0616_515b_4568_76c147234d34_805e9b5d {
