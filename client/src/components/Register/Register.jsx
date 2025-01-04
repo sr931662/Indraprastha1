@@ -6,7 +6,7 @@ import axios from 'axios'
 import { useAuth } from "../../store/auth";
 
 
-const URL = "<http://localhost:5175/api/auth/sign-up"
+const URL = "http://localhost:5175/api/auth/sign-up"
 
 const Register = ({ isSun }) => {
   // const navigate = useNavigate()
